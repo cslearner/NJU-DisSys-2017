@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddServer	labrpc.go	/^func (rn *Network) AddServer(servername interface{}, rs *Server) {$/;"	f
+AddService	labrpc.go	/^func (rs *Server) AddService(svc *Service) {$/;"	f
+Call	labrpc.go	/^func (e *ClientEnd) Call(svcMeth string, args interface{}, reply interface{}) bool {$/;"	f
+ClientEnd	labrpc.go	/^type ClientEnd struct {$/;"	t
+Connect	labrpc.go	/^func (rn *Network) Connect(endname interface{}, servername interface{}) {$/;"	f
+DeleteServer	labrpc.go	/^func (rn *Network) DeleteServer(servername interface{}) {$/;"	f
+Enable	labrpc.go	/^func (rn *Network) Enable(endname interface{}, enabled bool) {$/;"	f
+GetCount	labrpc.go	/^func (rn *Network) GetCount(servername interface{}) int {$/;"	f
+GetCount	labrpc.go	/^func (rs *Server) GetCount() int {$/;"	f
+Handler1	test_test.go	/^func (js *JunkServer) Handler1(args string, reply *int) {$/;"	f
+Handler2	test_test.go	/^func (js *JunkServer) Handler2(args int, reply *string) {$/;"	f
+Handler3	test_test.go	/^func (js *JunkServer) Handler3(args int, reply *int) {$/;"	f
+Handler4	test_test.go	/^func (js *JunkServer) Handler4(args *JunkArgs, reply *JunkReply) {$/;"	f
+Handler5	test_test.go	/^func (js *JunkServer) Handler5(args JunkArgs, reply *JunkReply) {$/;"	f
+IsServerDead	labrpc.go	/^func (rn *Network) IsServerDead(endname interface{}, servername interface{}, server *Server) bool {$/;"	f
+JunkArgs	test_test.go	/^type JunkArgs struct {$/;"	t
+JunkReply	test_test.go	/^type JunkReply struct {$/;"	t
+JunkServer	test_test.go	/^type JunkServer struct {$/;"	t
+LongDelays	labrpc.go	/^func (rn *Network) LongDelays(yes bool) {$/;"	f
+LongReordering	labrpc.go	/^func (rn *Network) LongReordering(yes bool) {$/;"	f
+MakeEnd	labrpc.go	/^func (rn *Network) MakeEnd(endname interface{}) *ClientEnd {$/;"	f
+MakeNetwork	labrpc.go	/^func MakeNetwork() *Network {$/;"	f
+MakeServer	labrpc.go	/^func MakeServer() *Server {$/;"	f
+MakeService	labrpc.go	/^func MakeService(rcvr interface{}) *Service {$/;"	f
+Network	labrpc.go	/^type Network struct {$/;"	t
+ProcessReq	labrpc.go	/^func (rn *Network) ProcessReq(req reqMsg) {$/;"	f
+ReadEndnameInfo	labrpc.go	/^func (rn *Network) ReadEndnameInfo(endname interface{}) (enabled bool,$/;"	f
+Reliable	labrpc.go	/^func (rn *Network) Reliable(yes bool) {$/;"	f
+Server	labrpc.go	/^type Server struct {$/;"	t
+Service	labrpc.go	/^type Service struct {$/;"	t
+TestBasic	test_test.go	/^func TestBasic(t *testing.T) {$/;"	f
+TestBenchmark	test_test.go	/^func TestBenchmark(t *testing.T) {$/;"	f
+TestConcurrentMany	test_test.go	/^func TestConcurrentMany(t *testing.T) {$/;"	f
+TestConcurrentOne	test_test.go	/^func TestConcurrentOne(t *testing.T) {$/;"	f
+TestCounts	test_test.go	/^func TestCounts(t *testing.T) {$/;"	f
+TestDisconnect	test_test.go	/^func TestDisconnect(t *testing.T) {$/;"	f
+TestKilled	test_test.go	/^func TestKilled(t *testing.T) {$/;"	f
+TestRegression1	test_test.go	/^func TestRegression1(t *testing.T) {$/;"	f
+TestTypes	test_test.go	/^func TestTypes(t *testing.T) {$/;"	f
+TestUnreliable	test_test.go	/^func TestUnreliable(t *testing.T) {$/;"	f
+dispatch	labrpc.go	/^func (rs *Server) dispatch(req reqMsg) replyMsg {$/;"	f
+dispatch	labrpc.go	/^func (svc *Service) dispatch(methname string, req reqMsg) replyMsg {$/;"	f
+labrpc	labrpc.go	/^package labrpc$/;"	p
+labrpc	test_test.go	/^package labrpc$/;"	p
+replyMsg	labrpc.go	/^type replyMsg struct {$/;"	t
+reqMsg	labrpc.go	/^type reqMsg struct {$/;"	t

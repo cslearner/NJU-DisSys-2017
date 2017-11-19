@@ -1,0 +1,69 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ApplyMsg	raft.go	/^type ApplyMsg struct {$/;"	t
+Copy	persister.go	/^func (ps *Persister) Copy() *Persister {$/;"	f
+DPrintf	util.go	/^func DPrintf(format string, a ...interface{}) (n int, err error) {$/;"	f
+Debug	util.go	/^const Debug = 0$/;"	c
+GetState	raft.go	/^func (rf *Raft) GetState() (int, bool) {$/;"	f
+Kill	raft.go	/^func (rf *Raft) Kill() {$/;"	f
+Make	raft.go	/^func Make(peers []*labrpc.ClientEnd, me int,$/;"	f
+MakePersister	persister.go	/^func MakePersister() *Persister {$/;"	f
+Persister	persister.go	/^type Persister struct {$/;"	t
+Raft	raft.go	/^type Raft struct {$/;"	t
+RaftElectionTimeout	test_test.go	/^const RaftElectionTimeout = 1000 * time.Millisecond$/;"	c
+RaftStateSize	persister.go	/^func (ps *Persister) RaftStateSize() int {$/;"	f
+ReadRaftState	persister.go	/^func (ps *Persister) ReadRaftState() []byte {$/;"	f
+ReadSnapshot	persister.go	/^func (ps *Persister) ReadSnapshot() []byte {$/;"	f
+RequestVote	raft.go	/^func (rf *Raft) RequestVote(args RequestVoteArgs, reply *RequestVoteReply) {$/;"	f
+RequestVoteArgs	raft.go	/^type RequestVoteArgs struct {$/;"	t
+RequestVoteReply	raft.go	/^type RequestVoteReply struct {$/;"	t
+SaveRaftState	persister.go	/^func (ps *Persister) SaveRaftState(data []byte) {$/;"	f
+SaveSnapshot	persister.go	/^func (ps *Persister) SaveSnapshot(snapshot []byte) {$/;"	f
+Start	raft.go	/^func (rf *Raft) Start(command interface{}) (int, int, bool) {$/;"	f
+TestBackup	test_test.go	/^func TestBackup(t *testing.T) {$/;"	f
+TestBasicAgree	test_test.go	/^func TestBasicAgree(t *testing.T) {$/;"	f
+TestConcurrentStarts	test_test.go	/^func TestConcurrentStarts(t *testing.T) {$/;"	f
+TestCount	test_test.go	/^func TestCount(t *testing.T) {$/;"	f
+TestFailAgree	test_test.go	/^func TestFailAgree(t *testing.T) {$/;"	f
+TestFailNoAgree	test_test.go	/^func TestFailNoAgree(t *testing.T) {$/;"	f
+TestFigure8	test_test.go	/^func TestFigure8(t *testing.T) {$/;"	f
+TestFigure8Unreliable	test_test.go	/^func TestFigure8Unreliable(t *testing.T) {$/;"	f
+TestInitialElection	test_test.go	/^func TestInitialElection(t *testing.T) {$/;"	f
+TestPersist1	test_test.go	/^func TestPersist1(t *testing.T) {$/;"	f
+TestPersist2	test_test.go	/^func TestPersist2(t *testing.T) {$/;"	f
+TestPersist3	test_test.go	/^func TestPersist3(t *testing.T) {$/;"	f
+TestReElection	test_test.go	/^func TestReElection(t *testing.T) {$/;"	f
+TestRejoin	test_test.go	/^func TestRejoin(t *testing.T) {$/;"	f
+TestReliableChurn	test_test.go	/^func TestReliableChurn(t *testing.T) {$/;"	f
+TestUnreliableAgree	test_test.go	/^func TestUnreliableAgree(t *testing.T) {$/;"	f
+TestUnreliableChurn	test_test.go	/^func TestUnreliableChurn(t *testing.T) {$/;"	f
+checkNoLeader	config.go	/^func (cfg *config) checkNoLeader() {$/;"	f
+checkOneLeader	config.go	/^func (cfg *config) checkOneLeader() int {$/;"	f
+checkTerms	config.go	/^func (cfg *config) checkTerms() int {$/;"	f
+cleanup	config.go	/^func (cfg *config) cleanup() {$/;"	f
+config	config.go	/^type config struct {$/;"	t
+connect	config.go	/^func (cfg *config) connect(i int) {$/;"	f
+crash1	config.go	/^func (cfg *config) crash1(i int) {$/;"	f
+disconnect	config.go	/^func (cfg *config) disconnect(i int) {$/;"	f
+internalChurn	test_test.go	/^func internalChurn(t *testing.T, unreliable bool) {$/;"	f
+make_config	config.go	/^func make_config(t *testing.T, n int, unreliable bool) *config {$/;"	f
+nCommitted	config.go	/^func (cfg *config) nCommitted(index int) (int, interface{}) {$/;"	f
+one	config.go	/^func (cfg *config) one(cmd int, expectedServers int) int {$/;"	f
+persist	raft.go	/^func (rf *Raft) persist() {$/;"	f
+raft	config.go	/^package raft$/;"	p
+raft	persister.go	/^package raft$/;"	p
+raft	raft.go	/^package raft$/;"	p
+raft	test_test.go	/^package raft$/;"	p
+raft	util.go	/^package raft$/;"	p
+randstring	config.go	/^func randstring(n int) string {$/;"	f
+readPersist	raft.go	/^func (rf *Raft) readPersist(data []byte) {$/;"	f
+rpcCount	config.go	/^func (cfg *config) rpcCount(server int) int {$/;"	f
+sendRequestVote	raft.go	/^func (rf *Raft) sendRequestVote(server int, args RequestVoteArgs, reply *RequestVoteReply) bool {$/;"	f
+setlongreordering	config.go	/^func (cfg *config) setlongreordering(longrel bool) {$/;"	f
+setunreliable	config.go	/^func (cfg *config) setunreliable(unrel bool) {$/;"	f
+start1	config.go	/^func (cfg *config) start1(i int) {$/;"	f
+wait	config.go	/^func (cfg *config) wait(index int, n int, startTerm int) interface{} {$/;"	f

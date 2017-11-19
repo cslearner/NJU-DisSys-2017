@@ -49,6 +49,13 @@ type Raft struct {
 	// Your data here.
 	// Look at the paper's Figure 2 for a description of what
 	// state a Raft server must maintain.
+    currentTerm int //current term number
+    votedFor int //candidateID that received vote in currentTerm
+    //log [] //ignored in lab2
+    //commitIndex int
+    //lastApplied int
+    //nextIndex []
+    //matchIndex []
 
 }
 
@@ -59,6 +66,12 @@ func (rf *Raft) GetState() (int, bool) {
 	var term int
 	var isleader bool
 	// Your code here.
+    term = rf.currentTerm
+    if votedFor == -1 {
+        isleader = true
+    } else {
+        isleader = false
+    }
 	return term, isleader
 }
 
@@ -98,6 +111,10 @@ func (rf *Raft) readPersist(data []byte) {
 //
 type RequestVoteArgs struct {
 	// Your data here.
+    term int //candidate's term
+    candidateId int //candidate requesting vote 
+    //lastLogIndex int
+    //lastLogTerm int
 }
 
 //
@@ -105,6 +122,8 @@ type RequestVoteArgs struct {
 //
 type RequestVoteReply struct {
 	// Your data here.
+    term int //currentTerm
+    voteGranted bool //true means candidate received vote
 }
 
 //
@@ -112,8 +131,45 @@ type RequestVoteReply struct {
 //
 func (rf *Raft) RequestVote(args RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here.
+    if args.term <= rf.currentTerm {
+        reply.term = rf.currentTerm
+        reply.voteGranted = false
+    //} else if args.term == rf.currentTerm {
+
+    } else {
+        if rf.votedFor == -1 || rf.votedFor == args.candidateId {
+            rf.mu.Lock()
+            rf.votedFor = args.candidateId
+            rf.currentTerm += 1
+            rf.mu.Unlock()
+
+            //return true
+            reply.term = rf.currentTerm
+            reply.voteGranted = true
+        } else {
+            reply.term = rf.currentTerm
+            reply.voteGranted = false
+        }
+    }
 }
 
+type AppendEntriesArg struct {
+    term int //leader's term
+    leaderId int
+    //prevLogIndex int
+    //prevLogTerm int 
+    entries []byte
+    leaderCommit int
+}
+
+type AppendEntriesReply struct {
+    term int //currentTerm
+    success bool
+}
+
+func (rf *Raft) AppendEntries(args AppendEntriesArg, reply *AppendEntriesReply) {
+
+}
 //
 // example code to send a RequestVote RPC to a server.
 // server is the index of the target server in rf.peers[].
@@ -188,6 +244,11 @@ func Make(peers []*labrpc.ClientEnd, me int,
 	rf.me = me
 
 	// Your initialization code here.
+    rf.currentTerm = 0
+    rf.votedFor = -1
+
+    //begin as follower
+
 
 	// initialize from state persisted before a crash
 	rf.readPersist(persister.ReadRaftState())
